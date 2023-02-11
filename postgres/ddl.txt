@@ -1,0 +1,1 @@
+see: https://github.com/ldbc/ldbc_snb_interactive_impls/tree/main/postgres/ddl

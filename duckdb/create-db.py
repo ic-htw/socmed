@@ -534,6 +534,66 @@ insert into xxx
 # con.execute(sql3)
 
 # -------------------------------------------------
+# xxx
+# -------------------------------------------------
+sql1 = """
+drop table if exists xxx;
+"""
+
+sql2 = """
+xxx
+"""
+
+sql3 = """
+insert into xxx
+  select * from read_csv('../csv/xxx.csv', delim='|', header=True, AUTO_DETECT=TRUE);
+"""
+
+# con.execute(sql1)
+# con.execute(sql2)
+# con.execute(sql3)
+
+# -------------------------------------------------
+# xxx
+# -------------------------------------------------
+sql1 = """
+drop table if exists xxx;
+"""
+
+sql2 = """
+xxx
+"""
+
+sql3 = """
+insert into xxx
+  select * from read_csv('../csv/xxx.csv', delim='|', header=True, AUTO_DETECT=TRUE);
+"""
+
+# con.execute(sql1)
+# con.execute(sql2)
+# con.execute(sql3)
+
+# -------------------------------------------------
+# xxx
+# -------------------------------------------------
+sql1 = """
+drop table if exists xxx;
+"""
+
+sql2 = """
+xxx
+"""
+
+sql3 = """
+insert into xxx
+  select * from read_csv('../csv/xxx.csv', delim='|', header=True, AUTO_DETECT=TRUE);
+"""
+
+# con.execute(sql1)
+# con.execute(sql2)
+# con.execute(sql3)
+
+# -------------------------------------------------
 print("ok")
 # -------------------------------------------------
 
