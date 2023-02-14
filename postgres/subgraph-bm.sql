@@ -65,6 +65,16 @@ FROM Person_knows_Person pkp1
 JOIN Person_knows_Person pkp2 ON pkp1.Person2Id = pkp2.Person1Id AND pkp1.Person1Id != pkp2.Person2Id
 JOIN Person_hasInterest_Tag ON pkp2.Person2Id = Person_hasInterest_Tag.personid;
 
+select count(*)
+from person as p1
+join person_knows_person pkp12 on pkp12.person1id = p1.id
+join person as p2 on pkp12.person2id = p2.id
+join person_knows_person pkp23 on pkp23.person1id = p2.id
+join person as p3 on pkp23.person2id = p3.id
+join person_hasinterest_tag phit on phit.personid = p3.id
+join tag t on phit.tagid = t.id;
+
+
 --------------------------------------------------------------------------------------
 -- Q7 85.2M
 --------------------------------------------------------------------------------------
@@ -105,6 +115,6 @@ AND cht2.hasTag_Tag IS NULL;
 SELECT count(*)
 FROM Person_knows_Person pkp1
 JOIN Person_knows_Person pkp2 ON pkp1.Person2Id = pkp2.Person1Id AND pkp1.Person1Id != pkp2.Person2Id
-JOIN Person_hasInterest_Tag ON pkp2.Person2Id = Person_hasInterest_Tag.personid
+JOIN Person_hasInterest_Tag ON pkp2.Person2Id = Person_hasInterest_Tag.personid 
 LEFT JOIN Person_knows_Person pkp3 ON pkp3.Person1Id = pkp1.Person1Id AND pkp3.Person2Id = pkp2.Person2Id
 WHERE pkp3.Person1Id IS NULL;
